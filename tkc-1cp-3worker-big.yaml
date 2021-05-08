@@ -1,0 +1,17 @@
+apiVersion: run.tanzu.vmware.com/v1alpha1
+kind: TanzuKubernetesCluster
+metadata:
+  name: tkc-bjoern-01
+spec:
+  distribution:
+    version: v1.20
+  topology:
+    controlPlane:
+      class: best-effort-medium
+      count: 1
+      storageClass: kubernetes-gold-storage-policy
+    workers:
+      class: best-effort-4xlarge
+      count: 3
+      storageClass: kubernetes-gold-storage-policy
+      
