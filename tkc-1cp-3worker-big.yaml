@@ -9,12 +9,12 @@ spec:
     controlPlane:
       class: best-effort-medium
       count: 1
-      storageClass: AVI Tanzu vSAN Storage Policy
+      storageClass: avi-tanzu-vsan-storage-policy
     workers:
       class: best-effort-medium
       count: 3
-      storageClass: AVI Tanzu vSAN Storage Policy
+      storageClass: avi-tanzu-vsan-storage-policy
   settings:
     storage:
-      classes: ["AVI Tanzu vSAN Storage Policy"]              #Named PVC storage classes
-      defaultClass: AVI Tanzu vSAN Storage Policy             #Default PVC storage class
+      classes: ["avi-tanzu-vsan-storage-policy"]              #Named PVC storage classes
+      defaultClass: avi-tanzu-vsan-storage-policy             #Default PVC storage class
