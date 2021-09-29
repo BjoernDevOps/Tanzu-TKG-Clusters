@@ -3,7 +3,7 @@ kind: TanzuKubernetesCluster
 metadata:
   name: tkc-tools
 spec:
- # distribution:
+  distribution:
  #   version: 1.20
   topology:
     controlPlane:
