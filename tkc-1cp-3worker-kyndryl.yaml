@@ -1,0 +1,20 @@
+apiVersion: run.tanzu.vmware.com/v1alpha1
+kind: TanzuKubernetesCluster
+metadata:
+  name: tkc-kyndryl-test
+spec:
+  distribution:
+    version: v1.22
+  topology:
+    controlPlane:
+      class: best-effort-medium
+      count: 1
+      storageClass: kubernetes-storage-policy-kyndryl
+    workers:
+      class: best-effort-medium
+      count: 3
+      storageClass: kubernetes-storage-policy-kyndryl
+  settings:
+    storage:
+      classes: ["kubernetes-storage-policy-kyndryl"]              #Named PVC storage classes
+      defaultClass: kubernetes-storage-policy-kyndryl             #Default PVC storage class
