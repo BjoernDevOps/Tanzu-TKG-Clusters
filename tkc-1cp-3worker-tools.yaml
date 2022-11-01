@@ -2,18 +2,24 @@ apiVersion: run.tanzu.vmware.com/v1alpha2
 kind: TanzuKubernetesCluster
 metadata:
   name: tkc-tools
+  namespace:
 spec:
-  distribution:
-    version: v1.22
   topology:
     controlPlane:
-      class: best-effort-medium
-      count: 1
+      replicas: 1
+      vmClass: best-effort-medium
       storageClass: avi-tanzu-vsan-storage-policy
-    workers:
-      class: best-effort-medium
-      count: 3
+      tkr:  
+        reference:
+          name: 
+    nodePools:
+    - name: worker-nodepool-a1
+      replicas: 3
+      vmClass: best-effort-medium
       storageClass: avi-tanzu-vsan-storage-policy
+      tkr:  
+        reference:
+          name: 
   settings:
     storage:
       classes: ["avi-tanzu-vsan-storage-policy"]              #Named PVC storage classes
