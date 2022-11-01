@@ -4,7 +4,7 @@ metadata:
   name: tkc-tools
 spec:
   distribution:
-    version: v1.23
+    version: v1.23.8
   topology:
     controlPlane:
       class: best-effort-medium
