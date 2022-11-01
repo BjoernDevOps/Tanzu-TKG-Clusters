@@ -4,6 +4,8 @@ metadata:
   name: tkc-tools
   namespace:
 spec:
+  distribution:
+    version: v1.22
   topology:
     controlPlane:
       replicas: 1
